@@ -1,0 +1,8 @@
+#!/bin/bash -x
+sdas8051 -jlosc blink.asm
+sdld -i blink
+packihx blink.ihx > blink.hex
+
+sdas8051 -jlosc boot_isp.asm
+sdld -i boot_isp
+packihx boot_isp.ihx > boot_isp.hex
